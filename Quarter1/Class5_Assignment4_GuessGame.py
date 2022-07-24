@@ -8,7 +8,9 @@ import random
 MIN_VALUE = 0
 MAX_VALUE = 10
 TRIES = 3
-FLAG = False       # print message if all tries are exausted
+
+# This is not needed, a simple check of userGuess with randomNumber would suffice and save memory
+# FLAG = False       # print message if all tries are exausted
 
 # Generate and store the random number
 randomNumber = random.randint(MIN_VALUE, MAX_VALUE)
@@ -26,8 +28,15 @@ for i in range(TRIES):
     else:
         print("Wrong Guess! Try Again")
 
+# This approach was OK but why use an extra variable, when same could be achieved with existing variables?
+# # Print win lose message
+# if(FLAG):
+#     print("\nYou WIN!\n")
+# else:
+#     print("\nBetter luck next time!\n")
+
 # Print win lose message
-if(FLAG):
+if(userGuess == randomNumber):
     print("\nYou WIN!\n")
 else:
     print("\nBetter luck next time!\n")
