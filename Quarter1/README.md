@@ -1,25 +1,9 @@
-
-  
-
-# PythonClass
-
-  
-
-  
+# PythonClass Quarter 1
 
 ## About
-
-  
-
-This is the repo for assignments for AI Course
-
-  
-
-  
+This is the repo for assignments for AI Course, that were given in Quater 1
 
 ## Assignments List Quarter 1
-
-  
 
 ### Class 3
 
