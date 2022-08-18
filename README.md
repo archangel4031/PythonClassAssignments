@@ -1,5 +1,9 @@
 
 # PythonClass
+
+[![Discord](https://img.shields.io/discord/987926559480512542?label=discord)](https://discord.gg/R2g75R52GX)
+[![GitHub last commit](https://img.shields.io/github/last-commit/archangel4031/PythonClassAssignments?color=%23f54242)](https://github.com/archangel4031/PythonClassAssignments)
+
 ## About
 This is the repo for assignments for AI Course. Details for each assignments can be found in `README` file of their respective folders
 
@@ -19,3 +23,5 @@ This is the repo for assignments for AI Course. Details for each assignments can
 	 3. Assignment 3 (Check for Palindrome)
 	 4. Assignment 4 (Numbers Pattern Type 1)
 	 5. Assignment 5 (Numbers Pattern Type 2)
+ 4. Class 7
+	 1. Assignment 1 (Student Data Entry) 
