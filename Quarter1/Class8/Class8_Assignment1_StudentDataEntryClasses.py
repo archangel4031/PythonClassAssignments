@@ -3,16 +3,29 @@
 # 1- Ask student name, age, email, phone no etc
 # 2- Ask to choose from courses like ai, cnc, bcc,iot, web3 etc
 # 3- Allow  student to select multiple courses
-# 4- Save courses as list in student dictionary
+# 4- Save courses as list in student class
 
 # Variable for setting length of print string decorations
-DECO = 7
+DECO = 10
 
-# Declare a default student Dictionary to be used as template
-studentDict = {"Name": "DefaultName",
-               "Age": "0",
-               "Email": "default@email.com"
-               }
+# Declare a class to hold Student Data
+
+class StudentData():
+    def __init__(self, name, age, email):
+        self.name = name
+        self.age = age
+        self.email = email
+        self.courses = []
+    
+    # Getter function for student courses
+    def getStudentCourses(self):
+        for course in self.courses:
+            print(f"[->]Enrolled in {course}")
+    
+    # Setter function for student courses
+    def setStudentCourses(self, newCourse):
+        self.courses.append(newCourse)
+
 
 # List to store Student Records
 studentRecords = list()
@@ -32,49 +45,54 @@ def mainMenu():
 
 # Function to add courses to student Data (called in addNewData() after user inputs basic details)
 
-def addCourse(userDict):
-    # Initialize an empty list for key "Courses"
-    userDict["Courses"] = []
+def addCourse(studentObject):
     print("-"*DECO, "Course Selection", "-"*DECO)
     # Iterate through Course List and ask user if they want to enroll or not
     for course in courseList:
         response = input(f"Do you want to enroll in {course}? (y/n): ")
         if(response.lower() == ("y" or "yes")):
             # Append course to Student Record key "Course"
-            userDict["Courses"].append(course)
+            studentObject.setStudentCourses(course)
             print(f"[*] Enrolled in {course}")
         else:
             print(f"[*] Not Selected {course}")
-    return userDict
+    return studentObject
 
 # Function to add new student data
 
 def addNewData():
     # Modify the global variable to maintain records between functions
     global studentRecords
-    # Initialize a local copy of dictionary to store Student Data. This will be pushed to studentRecords List
-    localDict = dict()
     print("\n\n")
     print("-" * DECO, "Add New Data", "-" * DECO)
-    # Iterate through keys, values and get user input
-    for key, value in studentDict.items():
-        localDict[key] = input(f"Enter Student {key}: ")
-    # Call function addCourse() to add Courses for this student
-    localDict = addCourse(localDict)
-    # Append to main record list
-    studentRecords.append(localDict)
+
+    # Get Input from user and create an object of type StudentData
+    studentName = input("Enter Student Name: ")
+    studentAge = input("Enter Student Age: ")
+    studentEmail = input("Enter Student Email: ")
+
+    # Create an object of StudentData and initialize with user inputs
+    studentObject = StudentData(studentName, studentAge, studentEmail)
+
+    # Pass to addCourse() function to enroll in courses
+    studentObject = addCourse(studentObject)
+
+    # Append the final object to list
+    studentRecords.append(studentObject)
 
 # Function to display Existing Data
 
 def displayData():
     print("\n\n")
     print("-" * DECO, "Display Exisiting Data", "-" * DECO)
-    # Get individual dictionary
+    # Get individual objects from list
     for rec in studentRecords:
-        print("*" * DECO)
-        # Print in form of Key, Value pair
-        for key, value in rec.items():
-            print(f"{key} = {value}")
+        print("*" * DECO * DECO)
+        print("Student Name: ", rec.name)
+        print("Student Age: ", rec.age)
+        print("Student Email: ", rec.email)
+        print("Courses Enrolled in: ")
+        rec.getStudentCourses()
 
 # Main function to call all other functions
 

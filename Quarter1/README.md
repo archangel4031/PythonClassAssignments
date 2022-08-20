@@ -51,7 +51,16 @@ This is the repo for assignments for AI Course, that were given in Quater 1
  -  **[Assignment 1 (Student Data Entry)](https://github.com/archangel4031/PythonClassAssignments/blob/master/Quarter1/Class7/Class7_Assignment1_StudentDataEntry.py)**
 	- Write program in which student can register in different courses:
 		- Ask student name, age, email, phone no etc
-		- Ask to choose from courses like ai, cnc, bcc,iot, web3 etc
+		- Ask to choose from courses like ai, cnc, bcc, iot, web3 etc
 		- Allow student to select multiple courses
 		- Save courses as list in student dictionary
+
+### Class 8
+
+ -  **[Assignment 1 (Student Data Entry Classes)](https://github.com/archangel4031/PythonClassAssignments/blob/master/Quarter1/Class8/Class8_Assignment1_StudentDataEntryClasses.py)**
+	- Write program in which student can register in different courses:
+		- Ask student name, age, email, phone no etc
+		- Ask to choose from courses like ai, cnc, bcc, iot, web3 etc
+		- Allow student to select multiple courses
+		- Save courses as list in student class
 

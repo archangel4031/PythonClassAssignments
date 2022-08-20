@@ -25,3 +25,5 @@ This is the repo for assignments for AI Course. Details for each assignments can
 	 5. Assignment 5 (Numbers Pattern Type 2)
  4. Class 7
 	 1. Assignment 1 (Student Data Entry) 
+ 5. Class 8
+	 1. Assignment 1 (Student Data Entry Classes)
