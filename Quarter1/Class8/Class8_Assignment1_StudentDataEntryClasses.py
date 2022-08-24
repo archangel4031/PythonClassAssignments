@@ -28,7 +28,7 @@ class StudentData():
 
 
 # List to store Student Records
-studentRecords = list()
+StudentRecordMain = list()
 
 # List of Default Courses available
 courseList = ["Artificial Intelligence", "Blockchain", "Cloud Native", "Internet of Things"]
@@ -60,9 +60,8 @@ def addCourse(studentObject):
 
 # Function to add new student data
 
-def addNewData():
-    # Modify the global variable to maintain records between functions
-    global studentRecords
+def addNewData(studentRecords):
+    
     print("\n\n")
     print("-" * DECO, "Add New Data", "-" * DECO)
 
@@ -79,10 +78,13 @@ def addNewData():
 
     # Append the final object to list
     studentRecords.append(studentObject)
+    
+    # Return the modified list to updated the golbal list
+    return studentRecords
 
 # Function to display Existing Data
 
-def displayData():
+def displayData(studentRecords):
     print("\n\n")
     print("-" * DECO, "Display Exisiting Data", "-" * DECO)
     # Get individual objects from list
@@ -96,15 +98,15 @@ def displayData():
 
 # Main function to call all other functions
 
-def main():
+def main(studentRecords):
     userSel = 0
     # Start a While Loop and continue until user selects Quit Option
     while(userSel != 3):
         userSel = mainMenu()
         if(userSel == 1):
-            addNewData()
+            studentRecords =  addNewData(studentRecords)
         elif(userSel == 2):
-            displayData()
+            displayData(studentRecords)
         elif(userSel == 3):
             print("\n\nQuitting!\n\n")
         else:
@@ -112,5 +114,5 @@ def main():
 
 
 # Start Program
-main()
+main(StudentRecordMain)
 print("***GOODBYE!***")
