@@ -8,11 +8,12 @@ immutableInteger = 99
 def appendInteger(inList, inInteger):
     print("[i] Inside function")
     
+    immutableInteger = 0
     # Print Memory Values before change
     print("Mem value of inList:\t\t", hex(id(inList))[-4:])
     print("Mem value of inInteger:\t\t", hex(id(inInteger))[-4:])
     print("Mem value of mutableList:\t", hex(id(mutableList))[-4:])
-    # print("Mem value of immutableInteger:\t\t", hex(id(immutableInteger)))            # ERROR on this line
+    print("Mem value of immutableInteger:\t", hex(id(immutableInteger))[-4:])            # ERROR on this line
 
     # Change local variable values
     inInteger += 1
