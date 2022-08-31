@@ -1,0 +1,6 @@
+Serial,Question Statement,Option 1,Option 2,Option 3,Option 4,Correct Answer
+Question 1,What is the prime number greater than 13,15,16,17,18,3
+Question 2,How many months have 31 days,4,5,6,7,4
+Question 3,If it is Saturday today what day of week will be after 12 days,Thursday,Friday,Saturday,Sunday,1
+Question 4,If two person complete a task in 10 days how many days will it take for five people to complete the same task,1,2,3,4,2
+Question 5,In how many different ways can 3 identical green shirts and 3 identical red shirts be distributed among 6 children such that each child receives a shirt?,20,40,216,720,1

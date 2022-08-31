@@ -27,3 +27,6 @@ This is the repo for assignments for AI Course. Details for each assignments can
 	 1. Assignment 1 (Student Data Entry) 
  5. Class 8
 	 1. Assignment 1 (Student Data Entry Classes)
+ 6. Class 9
+	 1. Assignment 1 (Quiz System)
+	 2. Assignment 2 (Online Store)
